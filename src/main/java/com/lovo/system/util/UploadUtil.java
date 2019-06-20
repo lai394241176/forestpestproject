@@ -36,9 +36,10 @@ public class UploadUtil {
         upload.setHeaderEncoding("UTF-8");
         //获得页面的上传文件和表单文本
         List<FileItem> list = upload.parseRequest(request);
-
-        List<FileItem> listFile = new ArrayList<>();//文件数据数组
-        List<FileItem> listForm = new ArrayList<>();//表单数据数组
+        //文件数据数组
+        List<FileItem> listFile = new ArrayList<>();
+        //表单数据数组
+        List<FileItem> listForm = new ArrayList<>();
 
         Map<String, List<FileItem>> map = new HashMap<>();
 
