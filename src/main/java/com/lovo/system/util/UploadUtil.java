@@ -3,9 +3,9 @@ package com.lovo.system.util;
 /**
  * @author che
  * @title: up
- * @projectName attendance
+ * @projectName forestpestproject
  * @description: TODO
- * @date 2019/6/1817:46
+ * @date 2019/6/18 17:46
  */
 
 import org.apache.commons.fileupload.FileItem;

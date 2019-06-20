@@ -5,9 +5,9 @@ import java.util.UUID;
 /**
  * @author che
  * @title: GetUUID
- * @projectName sevelet2
+ * @projectName forestpestproject
  * @description: create a UUid
- * @date 2019/6/114:41
+ * @date 2019/6/1 14:41
  */
 public class GetUUID {
 
