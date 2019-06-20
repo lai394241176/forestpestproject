@@ -8,4 +8,5 @@ package com.lovo.system.bean;
  * @date 2019/6/20  14:37
  */
 public class ProfessorBean {
+
 }
