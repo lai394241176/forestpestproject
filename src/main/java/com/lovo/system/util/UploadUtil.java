@@ -22,11 +22,12 @@ import java.util.Map;
 public class UploadUtil {
     /**
      * 返回 文件和表单 fileitem
+     *
      * @param request
-     * @return  listFile=文件，listForm=表单
+     * @return listFile=文件，listForm=表单
      * @throws FileUploadException
      */
-    public Map<String,List<FileItem>> getFileItem(HttpServletRequest request) throws FileUploadException {
+    public Map<String, List<FileItem>> getFileItem(HttpServletRequest request) throws FileUploadException {
         //1、创建一个DiskFileItemFactory工厂
         DiskFileItemFactory factory = new DiskFileItemFactory();
         //2、创建一个文件上传解析器
@@ -36,12 +37,12 @@ public class UploadUtil {
         //获得页面的上传文件和表单文本
         List<FileItem> list = upload.parseRequest(request);
 
-        List<FileItem> listFile=new ArrayList<>();//文件数据数组
-        List<FileItem> listForm=new ArrayList<>();//表单数据数组
+        List<FileItem> listFile = new ArrayList<>();//文件数据数组
+        List<FileItem> listForm = new ArrayList<>();//表单数据数组
 
-        Map<String,List<FileItem>> map=new HashMap<>();
+        Map<String, List<FileItem>> map = new HashMap<>();
 
-        for(FileItem item : list) {
+        for (FileItem item : list) {
             //如果fileitem中封装的是普通输入项的数据
             if (item.isFormField()) {
                 listForm.add(item);
@@ -49,10 +50,12 @@ public class UploadUtil {
                 listFile.add(item);
             }
         }
-        if(listFile.size()>0)
-            map.put("listFile",listFile);
-        if(listForm.size()>0)
-            map.put("listForm",listForm);
+        if (listFile.size() > 0) {
+            map.put("listFile", listFile);
+        }
+        if (listForm.size() > 0) {
+            map.put("listForm", listForm);
+        }
         return map;
     }
 }
