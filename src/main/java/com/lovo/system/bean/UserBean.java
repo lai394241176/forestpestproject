@@ -8,4 +8,5 @@ package com.lovo.system.bean;
  * @date 2019/6/2014:17
  */
 public class UserBean {
+    int a=1;
 }
