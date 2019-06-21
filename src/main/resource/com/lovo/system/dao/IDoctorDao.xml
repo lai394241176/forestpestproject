@@ -3,6 +3,21 @@
 
 <mapper namespace="com.lovo.system.dao.IDoctorDao">
 
+    <resultMap id="doctorMap" type="sysDoctor">
+        <id column="doctor_id" property="doctorId"></id>
+        <result column="doctor_name" property="doctorName"></result>
+        <result column="doctor_sex" property="doctorSex"></result>
+        <result column="doctor_birthday" property="doctorBirthday"></result>
+        <result column="doctor_img_path" property="doctorImgPath"></result>
+        <result column="doctor_speciality" property="doctorSpeciality"></result>
+        <result column="doctor_post" property="doctorPost"></result>
+        <result column="doctor_tel" property="doctorTel"></result>
+        <result column="doctor_company" property="doctorCompany"></result>
+        <result column="doctor_home" property="doctorHome"></result>
+        <result column="doctor_email" property="doctorEmail"></result>
+    </resultMap>
+
+    <!--添加专家-->
     <insert id="insertDoctor" parameterType="sysDoctor">
         insert into sys_doctor (
         doctor_name, 
@@ -26,6 +41,25 @@
         #{doctorEmail}
         );
     </insert>
-    
-    
+
+    <delete id="deleteDoctorById" parameterType="int">
+        delete from sys_doctor where doctor_id = #{0}
+    </delete>
+
+    <select id="findDoctorById" parameterType="int" resultMap="doctorMap">
+        select * from sys_doctor where doctor_id = #{0}
+    </select>
+
+    <select id="findAllDoctor" resultMap="doctorMap">
+        select * from sys_doctor
+    </select>
+
+    <select id="findDoctorByItem" parameterType="Map" resultMap="doctorMap">
+        select * from sys_doctor
+        <where>
+            <if test="findByName !=null"></if>
+            <if test="findBySpeciality !=null"></if>
+            <if test="findByCompany !=null"></if>
+        </where>
+    </select>
 </mapper>

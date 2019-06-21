@@ -32,7 +32,7 @@ public interface IDoctorService {
      * @param doctorId 专家id
      * @return 受影响的行数
      */
-    int deletDoctorByid(int doctorId);
+    int deleteDoctorById(int doctorId);
 
 
     //==================查询=======================
