@@ -1,6 +1,13 @@
 package com.lovo.system.bean;
 
 
+/**
+ * @author che
+ * @title: SysEvent 事件类
+ * @projectName forestpestproject
+ * @description: 事件实体类
+ * @date 2019/6/21 15:56
+ */
 public class SysEvent {
 
   private long eventId;

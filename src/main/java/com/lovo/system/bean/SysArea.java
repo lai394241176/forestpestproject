@@ -1,6 +1,13 @@
 package com.lovo.system.bean;
 
 
+/**
+ * @author che
+ * @title: SysArea 地区类
+ * @projectName forestpestproject
+ * @description: 地区实体类
+ * @date 2019/6/21 15:56
+ */
 public class SysArea {
 
   private long areaId;

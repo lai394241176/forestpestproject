@@ -1,6 +1,13 @@
 package com.lovo.system.bean;
 
 
+/**
+ * @author che
+ * @title: SysSick 药品器械实体
+ * @projectName forestpestproject
+ * @description: 药品器械实体类
+ * @date 2019/6/21 15:56
+ */
 public class DrugStockpile {
 
   private long drugId;

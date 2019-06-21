@@ -1,6 +1,12 @@
 package com.lovo.system.bean;
 
-
+/**
+ * @author che
+ * @title: SysRole1 角色表
+ * @projectName forestpestproject
+ * @description: 用户实体类
+ * @date 2019/6/21 15:56
+ */
 public class SysUser {
 
     private long userId;

@@ -1,6 +1,14 @@
 package com.lovo.system.bean;
 
 
+
+/**
+ * @author che
+ * @title: SysPower 权限实体类
+ * @projectName forestpestproject
+ * @description: 权限实体类
+ * @date 2019/6/21 15:56
+ */
 public class SysPower {
 
   private long powerId;

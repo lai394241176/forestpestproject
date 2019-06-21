@@ -1,6 +1,12 @@
 package com.lovo.system.bean;
 
-
+/**
+ * @author che
+ * @title: SysType 类型表
+ * @projectName forestpestproject
+ * @description: 类型表实体类
+ * @date 2019/6/21 15:56
+ */
 public class SysType {
 
   private long typeId;

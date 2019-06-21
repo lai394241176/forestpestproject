@@ -2,9 +2,9 @@ package com.lovo.system.bean;
 
 /**
  * @author che
- * @title: SysRole1
+ * @title: SysRole 角色实体类
  * @projectName forestpestproject
- * @description: TODO
+ * @description: 角色实体类
  * @date 2019/6/21 15:56
  */
 public class SysRole {

@@ -1,6 +1,13 @@
 package com.lovo.system.bean;
 
 
+/**
+ * @author che
+ * @title: SysDrug 药品类
+ * @projectName forestpestproject
+ * @description: 药品实体类
+ * @date 2019/6/21 15:56
+ */
 public class SysDrug {
 
   private long drugId;
