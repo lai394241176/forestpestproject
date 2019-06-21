@@ -19,20 +19,20 @@ public interface IDoctorService {
     /**
      * 添加专家
      *
-     * @param DoctorBean 专家实体类
+     * @param doctorBean 专家实体类
      * @return 受影响的行数
      */
-    int insertDoctor(SysDoctor DoctorBean);
+    int insertDoctor(SysDoctor doctorBean);
 
     //==================删除=======================
 
     /**
      * 按专家id 删除专家
      *
-     * @param DoctorId 专家id
+     * @param doctorId 专家id
      * @return 受影响的行数
      */
-    int deletDoctorByid(int DoctorId);
+    int deletDoctorByid(int doctorId);
 
 
     //==================查询=======================
@@ -40,10 +40,10 @@ public interface IDoctorService {
     /**
      * 按专家id 查询专家
      *
-     * @param DoctorId 专家id
+     * @param doctorId 专家id
      * @return 专家实体类
      */
-    SysDoctor findProessorById(int DoctorId);
+    SysDoctor findDoctorById(int doctorId);
 
     /**
      * 查询所有专家
@@ -65,8 +65,8 @@ public interface IDoctorService {
     /**
      * 修改专家信息
      *
-     * @param DoctorUpdateMap 专家修改信息map
+     * @param doctorUpdateMap 专家修改信息map
      * @return 受影响的行数
      */
-    int updateDoctor(Map DoctorUpdateMap);
+    int updateDoctor(Map doctorUpdateMap);
 }
