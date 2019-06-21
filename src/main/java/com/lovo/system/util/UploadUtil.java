@@ -1,12 +1,5 @@
 package com.lovo.system.util;
 
-/**
- * @author che
- * @title: up
- * @projectName forestpestproject
- * @description: TODO
- * @date 2019/6/18 17:46
- */
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -19,6 +12,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author che
+ * @title: UploadUtil 文件上传工具类
+ * @projectName forestpestproject
+ * @description: 文件上传工具
+ * @date 2019/6/18 17:46
+ */
 public class UploadUtil {
     /**
      * 返回 文件和表单 fileitem
@@ -34,6 +34,7 @@ public class UploadUtil {
         ServletFileUpload upload = new ServletFileUpload(factory);
         //解决上传文件名的中文乱码
         upload.setHeaderEncoding("UTF-8");
+
         //获得页面的上传文件和表单文本
         List<FileItem> list = upload.parseRequest(request);
         //文件数据数组
