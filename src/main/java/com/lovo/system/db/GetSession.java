@@ -20,8 +20,8 @@ public class GetSession {
     private static SqlSessionFactory sqlSessionFactory = null;
 
     static {
-        final String SOURCE = "mybaitsConfig.xml";
-        try (InputStream inputStream = Resources.getResourceAsStream(SOURCE)) {
+        final String source = "mybaits.xml";
+        try (InputStream inputStream = Resources.getResourceAsStream(source)) {
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         } catch (IOException e) {
             e.printStackTrace();

@@ -10,16 +10,49 @@ package com.lovo.system.bean;
  */
 public class SysDoctor {
 
+    /**
+     * 专家id
+     */
     private long doctorId;
+    /**
+     * 专家姓名
+     */
     private String doctorName;
+    /**
+     * 专家性别
+     */
     private String doctorSex;
+    /**
+     * 专家生日
+     */
     private String doctorBirthday;
+    /**
+     * 专家照片路径
+     */
     private String doctorImgPath;
+    /**
+     * 专家专长
+     */
     private String doctorSpeciality;
+    /**
+     * 专家职务
+     */
     private String doctorPost;
+    /**
+     * 专家电话
+     */
     private String doctorTel;
+    /**
+     * 专家公司
+     */
     private String doctorCompany;
+    /**
+     * 专家住址
+     */
     private String doctorHome;
+    /**
+     * 专家邮箱
+     */
     private String doctorEmail;
 
 
