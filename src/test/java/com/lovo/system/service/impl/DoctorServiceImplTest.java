@@ -19,8 +19,8 @@ import static org.junit.Assert.*;
  * @author che
  * @title: DoctorServiceImplTest
  * @projectName forestpestproject
- * @description: TODO
- * @date 2019/6/2116:50
+ * @description: 专家持久接口测试类
+ * @date 2019/6/21 16:50
  */
 public class DoctorServiceImplTest {
 
