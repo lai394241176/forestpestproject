@@ -42,24 +42,54 @@
         );
     </insert>
 
+    <!--按id删除专家-->
     <delete id="deleteDoctorById" parameterType="int">
         delete from sys_doctor where doctor_id = #{0}
     </delete>
 
+    <!--按id查找专家-->
     <select id="findDoctorById" parameterType="int" resultMap="doctorMap">
         select * from sys_doctor where doctor_id = #{0}
     </select>
 
+    <!--查找所有专家-->
     <select id="findAllDoctor" resultMap="doctorMap">
         select * from sys_doctor
     </select>
 
+    <!--动态查询专家-->
     <select id="findDoctorByItem" parameterType="Map" resultMap="doctorMap">
         select * from sys_doctor
         <where>
-            <if test="findByName !=null"></if>
-            <if test="findBySpeciality !=null"></if>
-            <if test="findByCompany !=null"></if>
+            <if test="findByName != null and findByName!=''">
+                and doctor_name like '%${findByName}%'
+            </if>
+            <if test="findBySpeciality != null and findBySpeciality != ''">
+                and doctor_speciality = #{findBySpeciality}
+            </if>
+            <if test="findByCompany != null and findByCompany != ''">
+                and doctor_company = #{findByCompany}
+            </if>
         </where>
     </select>
+
+    <!--修改专家信息-->
+    <update id="updateDoctor" parameterType="Map">
+        update sys_doctor
+        <set>
+            <if test="updateTel != null and updateTel !=''">
+                doctor_tel = #{updateTel},
+            </if>
+            <if test="updatePost != null and updatePost != ''">
+                doctor_post = #{updatePost},
+            </if>
+            <if test="updateCompany != null and updateCompany != ''">
+                doctor_company = #{updateCompany},
+            </if>
+            <if test="updateEmail != null and updateEmail != ''">
+                doctor_email =#{updateEmail},
+            </if>
+        </set>
+        where doctor_id = #{updateId}
+    </update>
 </mapper>
