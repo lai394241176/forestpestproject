@@ -1,19 +1,12 @@
 package com.lovo.system.service.impl;
 
-import com.lovo.system.bean.SysDoctor;
 import com.lovo.system.dao.IDoctorDao;
-import com.lovo.system.db.GetSession;
 import com.lovo.system.service.IDoctorService;
-import org.apache.ibatis.session.SqlSession;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static org.junit.Assert.*;
 
 /**
  * @author che

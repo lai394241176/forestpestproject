@@ -15,13 +15,18 @@ public interface MouseDao {
      * @return
      */
     public int registerInfo(SysMouse mouse);
+    /**
+     *查询全部
+     * @return
+     */
+    List<SysMouse> findAllmouse();
 
     /**
      *
      * @param map 条件
      * @return 鼠害集合
      */
-    public List<SysMouse> getListStudent(Map map);
+    public List<SysMouse> getListmouse(Map map);
 
-    public List
+
 }
