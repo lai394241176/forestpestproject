@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lovo.system.dao.IEventsDao">
+
+    <resultMap id="eventMap" type="sysEvent">
+        <id column="event_id" property="eventId"></id>
+        <result column="area_id" property="areaId"></result>
+        <result column="event_name" property="eventName"></result>
+        <result column="event_img_path" property="eventImgPath"></result>
+        <result column="event_date" property="eventDate"></result>
+        <result column="event_stage" property="eventStage"></result>
+        <result column="event_type" property="eventType"></result>
+        <result column="event_info" property="eventInfo"></result>
+        <result column="event_find_way" property="eventFindWay"></result>
+        <result column="event_lose" property="eventLose"></result>
+        <result column="event_area" property="eventArea"></result>
+        <result column="event_method" property="eventMethod"></result>
+        <association column="area_id" property="area" javaType="sysArea"
+                     select="com.lovo.system.dao.IAreaDao.findAreaByAreaId"></association>
+    </resultMap>
+
+    <insert id="insertEvent" parameterType="sysEvent">
+        insert into sys_event (
+        area_id,
+        event_name,
+        event_img_path,
+        event_date,
+        event_stage,
+        event_type,
+        event_info,
+        event_find_way,
+        event_lose,
+        event_area,
+        event_method)
+        values (
+        #{areaId},
+        #{eventName},
+        #{eventImgPath},
+        #{eventDate},
+        #{eventStage},
+        #{eventType},
+        #{eventInfo},
+        #{eventFindWay},
+        #{eventLose},
+        #{eventArea},
+        #{eventMethod}
+        )
+
+    </insert>
+
+    <select id="findAllEvent" resultMap="eventMap">
+        select * from sys_event
+    </select>
+
+    <select id="findEventById" resultMap="eventMap">
+        select * from sys_event where event_id = #{0}
+    </select>
+
+    <select id="finEventsByItems" resultMap="eventMap">
+        select * from sys_event left join sys_area sa on sys_event.area_id = sa.area_id
+        <where>
+            <if test="findByEventName != null and findByEventName !=''">
+                and event_name like '%${findByEventName}%'
+            </if>
+            <if test="findEventStage != null and findEventStage !=''">
+                and event_stage like '%${findEventStage}%'
+            </if>
+            <if test="findByAreaName != null and findByAreaName !=''">
+                and sa.area_name like '%${findByAreaName}%'
+            </if>
+            <if test="findByStartDate != null and findByStartDate !=''">
+                and event_date &gt; #{findByStartDate}
+            </if>
+            <if test="findByEndDate != null and findByEndDate !=''">
+                and event_date $lt; #{findByEndDate}
+            </if>
+        </where>
+    </select>
+
+    <update id="sendEventToDoctor">
+
+    </update>
+
+    <update id="updateEvent">
+        update sys_event
+        <set>
+            <if test="updateEventStage != null and updateEventStage !=''">
+                event_stage = #{updateEventStage}
+            </if>
+            <if test="updateEventMethod != null and updateEventMethod !=''">
+                event_method =#{updateEventMethod}
+            </if>
+        </set>
+        where event_id = #{EventId}
+    </update>
+
+</mapper>
