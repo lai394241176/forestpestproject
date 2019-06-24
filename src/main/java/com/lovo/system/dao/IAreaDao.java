@@ -42,5 +42,13 @@ public interface IAreaDao {
      */
     List<SysArea> findAreaByItems(Map findItems);
 
+    /**
+     * 按照地区id查找地区
+     *
+     * @param areaId 地区Id
+     * @return 地区对象
+     */
+    SysArea findAreaByAreaId(int areaId);
+
 
 }
