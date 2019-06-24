@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lovo.system.dao.IDoctorDao">
+
+    <resultMap id="doctorMap" type="sysDoctor">
+        <id column="doctor_id" property="doctorId"></id>
+        <result column="doctor_name" property="doctorName"></result>
+        <result column="doctor_sex" property="doctorSex"></result>
+        <result column="doctor_birthday" property="doctorBirthday"></result>
+        <result column="doctor_img_path" property="doctorImgPath"></result>
+        <result column="doctor_speciality" property="doctorSpeciality"></result>
+        <result column="doctor_post" property="doctorPost"></result>
+        <result column="doctor_tel" property="doctorTel"></result>
+        <result column="doctor_company" property="doctorCompany"></result>
+        <result column="doctor_home" property="doctorHome"></result>
+        <result column="doctor_email" property="doctorEmail"></result>
+    </resultMap>
+
+    <!--添加专家-->
+    <insert id="insertDoctor" parameterType="sysDoctor">
+        insert into sys_doctor (
+        doctor_name, 
+        doctor_sex, 
+        doctor_birthday,
+        doctor_img_path,
+        doctor_speciality,
+        doctor_post, doctor_tel,
+        doctor_company, doctor_home,
+        doctor_email) 
+        values (
+        #{doctorName},
+        #{doctorSex},
+        #{doctorBirthday},
+        #{doctorImgPath},
+        #{doctorSpeciality},
+        #{doctorPost},
+        #{doctorTel},
+        #{doctorCompany},
+        #{doctorHome},
+        #{doctorEmail}
+        );
+    </insert>
+
+    <!--按id删除专家-->
+    <delete id="deleteDoctorById" parameterType="int">
+        delete from sys_doctor where doctor_id = #{0}
+    </delete>
+
+    <!--按id查找专家-->
+    <select id="findDoctorById" parameterType="int" resultMap="doctorMap">
+        select * from sys_doctor where doctor_id = #{0}
+    </select>
+
+    <!--查找所有专家-->
+    <select id="findAllDoctor" resultMap="doctorMap">
+        select * from sys_doctor
+    </select>
+
+    <!--动态查询专家-->
+    <select id="findDoctorByItem" parameterType="Map" resultMap="doctorMap">
+        select * from sys_doctor
+        <where>
+            <if test="findByName != null and findByName!=''">
+                and doctor_name like '%${findByName}%'
+            </if>
+            <if test="findBySpeciality != null and findBySpeciality != ''">
+                and doctor_speciality = #{findBySpeciality}
+            </if>
+            <if test="findByCompany != null and findByCompany != ''">
+                and doctor_company = #{findByCompany}
+            </if>
+        </where>
+    </select>
+
+    <!--修改专家信息-->
+    <update id="updateDoctor" parameterType="Map">
+        update sys_doctor
+        <set>
+            <if test="updateTel != null and updateTel !=''">
+                doctor_tel = #{updateTel},
+            </if>
+            <if test="updatePost != null and updatePost != ''">
+                doctor_post = #{updatePost},
+            </if>
+            <if test="updateCompany != null and updateCompany != ''">
+                doctor_company = #{updateCompany},
+            </if>
+            <if test="updateEmail != null and updateEmail != ''">
+                doctor_email =#{updateEmail},
+            </if>
+        </set>
+        where doctor_id = #{updateId}
+    </update>
+</mapper>
