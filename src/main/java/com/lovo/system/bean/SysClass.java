@@ -10,75 +10,96 @@ package com.lovo.system.bean;
  */
 public class SysClass {
 
-  private long sclassId;
-  private long areaId;
-  private String sclassName;
-  private String sclassLeader;
-  private String sclassLeaderTel;
-  private long sclassNum;
-  private String sclassStartDate;
+    /**
+     * 小班id
+     */
+    private long sClassId;
+    /**
+     * 负责地区id
+     */
+    private long areaId;
+    /**
+     * 小班名称
+     */
+    private String sClassName;
+    /**
+     * 小班领导
+     */
+    private String sClassLeader;
+    /**
+     * 小班领导电话
+     */
+    private String sClassLeaderTel;
+    /**
+     * 小班人数
+     */
+    private long sClassNum;
+    /**
+     * 小班创建日期
+     */
+    private String sClassStartDate;
 
 
-  public long getSclassId() {
-    return sclassId;
-  }
+    public long getsClassId() {
+        return sClassId;
+    }
 
-  public void setSclassId(long sclassId) {
-    this.sclassId = sclassId;
-  }
-
-
-  public long getAreaId() {
-    return areaId;
-  }
-
-  public void setAreaId(long areaId) {
-    this.areaId = areaId;
-  }
+    public void setsClassId(long sClassId) {
+        this.sClassId = sClassId;
+    }
 
 
-  public String getSclassName() {
-    return sclassName;
-  }
+    public long getAreaId() {
+        return areaId;
+    }
 
-  public void setSclassName(String sclassName) {
-    this.sclassName = sclassName;
-  }
-
-
-  public String getSclassLeader() {
-    return sclassLeader;
-  }
-
-  public void setSclassLeader(String sclassLeader) {
-    this.sclassLeader = sclassLeader;
-  }
+    public void setAreaId(long areaId) {
+        this.areaId = areaId;
+    }
 
 
-  public String getSclassLeaderTel() {
-    return sclassLeaderTel;
-  }
+    public String getsClassName() {
+        return sClassName;
+    }
 
-  public void setSclassLeaderTel(String sclassLeaderTel) {
-    this.sclassLeaderTel = sclassLeaderTel;
-  }
-
-
-  public long getSclassNum() {
-    return sclassNum;
-  }
-
-  public void setSclassNum(long sclassNum) {
-    this.sclassNum = sclassNum;
-  }
+    public void setsClassName(String sClassName) {
+        this.sClassName = sClassName;
+    }
 
 
-  public String getSclassStartDate() {
-    return sclassStartDate;
-  }
+    public String getsClassLeader() {
+        return sClassLeader;
+    }
 
-  public void setSclassStartDate(String sclassStartDate) {
-    this.sclassStartDate = sclassStartDate;
-  }
+    public void setsClassLeader(String sClassLeader) {
+        this.sClassLeader = sClassLeader;
+    }
+
+
+    public String getsClassLeaderTel() {
+        return sClassLeaderTel;
+    }
+
+    public void setsClassLeaderTel(String sClassLeaderTel) {
+        this.sClassLeaderTel = sClassLeaderTel;
+    }
+
+
+    public long getsClassNum() {
+        return sClassNum;
+    }
+
+    public void setsClassNum(long sClassNum) {
+        this.sClassNum = sClassNum;
+    }
+
+
+    public String getsClassStartDate() {
+        return sClassStartDate;
+    }
+
+    public void setsClassStartDate(String sClassStartDate) {
+        this.sClassStartDate = sClassStartDate;
+    }
 
 }

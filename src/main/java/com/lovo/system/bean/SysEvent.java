@@ -10,125 +10,162 @@ package com.lovo.system.bean;
  */
 public class SysEvent {
 
-  private long eventId;
-  private long areaId;
-  private String eventName;
-  private String eventImgPath;
-  private String eventDate;
-  private long eventStage;
-  private long eventType;
-  private String eventInfo;
-  private long eventFindWay;
-  private String eventLoss;
-  private String eventArea;
-  private String eventMethod;
+    /**
+     * 事件id
+     */
+    private long eventId;
+    /**
+     * 地区id
+     */
+    private long areaId;
+    /**
+     * 事件名称
+     */
+    private String eventName;
+    /**
+     * 事件图片路径
+     */
+    private String eventImgPath;
+    /**
+     * 事件发生时间
+     */
+    private String eventDate;
+
+    /**
+     * 时间灾情阶段
+     */
+    private long eventStage;
+    /**
+     * 事件灾害类型
+     */
+    private long eventType;
+    /**
+     * 事件描述
+     */
+    private String eventInfo;
+    /**
+     * 事件发现途径
+     */
+    private long eventFindWay;
+    /**
+     * 事件初步损失
+     */
+    private String eventLose;
+    /**
+     * 事件影响面积
+     */
+    private String eventArea;
+    /**
+     * 事件防治方案
+     */
+    private String eventMethod;
 
 
-  public long getEventId() {
-    return eventId;
-  }
+    public long getEventId() {
+        return eventId;
+    }
 
-  public void setEventId(long eventId) {
-    this.eventId = eventId;
-  }
-
-
-  public long getAreaId() {
-    return areaId;
-  }
-
-  public void setAreaId(long areaId) {
-    this.areaId = areaId;
-  }
+    public void setEventId(long eventId) {
+        this.eventId = eventId;
+    }
 
 
-  public String getEventName() {
-    return eventName;
-  }
+    public long getAreaId() {
+        return areaId;
+    }
 
-  public void setEventName(String eventName) {
-    this.eventName = eventName;
-  }
-
-
-  public String getEventImgPath() {
-    return eventImgPath;
-  }
-
-  public void setEventImgPath(String eventImgPath) {
-    this.eventImgPath = eventImgPath;
-  }
+    public void setAreaId(long areaId) {
+        this.areaId = areaId;
+    }
 
 
-  public String getEventDate() {
-    return eventDate;
-  }
+    public String getEventName() {
+        return eventName;
+    }
 
-  public void setEventDate(String eventDate) {
-    this.eventDate = eventDate;
-  }
-
-
-  public long getEventStage() {
-    return eventStage;
-  }
-
-  public void setEventStage(long eventStage) {
-    this.eventStage = eventStage;
-  }
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
 
 
-  public long getEventType() {
-    return eventType;
-  }
+    public String getEventImgPath() {
+        return eventImgPath;
+    }
 
-  public void setEventType(long eventType) {
-    this.eventType = eventType;
-  }
-
-
-  public String getEventInfo() {
-    return eventInfo;
-  }
-
-  public void setEventInfo(String eventInfo) {
-    this.eventInfo = eventInfo;
-  }
+    public void setEventImgPath(String eventImgPath) {
+        this.eventImgPath = eventImgPath;
+    }
 
 
-  public long getEventFindWay() {
-    return eventFindWay;
-  }
+    public String getEventDate() {
+        return eventDate;
+    }
 
-  public void setEventFindWay(long eventFindWay) {
-    this.eventFindWay = eventFindWay;
-  }
-
-
-  public String getEventLoss() {
-    return eventLoss;
-  }
-
-  public void setEventLoss(String eventLoss) {
-    this.eventLoss = eventLoss;
-  }
+    public void setEventDate(String eventDate) {
+        this.eventDate = eventDate;
+    }
 
 
-  public String getEventArea() {
-    return eventArea;
-  }
+    public long getEventStage() {
+        return eventStage;
+    }
 
-  public void setEventArea(String eventArea) {
-    this.eventArea = eventArea;
-  }
+    public void setEventStage(long eventStage) {
+        this.eventStage = eventStage;
+    }
 
 
-  public String getEventMethod() {
-    return eventMethod;
-  }
+    public long getEventType() {
+        return eventType;
+    }
 
-  public void setEventMethod(String eventMethod) {
-    this.eventMethod = eventMethod;
-  }
+    public void setEventType(long eventType) {
+        this.eventType = eventType;
+    }
+
+
+    public String getEventInfo() {
+        return eventInfo;
+    }
+
+    public void setEventInfo(String eventInfo) {
+        this.eventInfo = eventInfo;
+    }
+
+
+    public long getEventFindWay() {
+        return eventFindWay;
+    }
+
+    public void setEventFindWay(long eventFindWay) {
+        this.eventFindWay = eventFindWay;
+    }
+
+
+    public String getEventLose() {
+        return eventLose;
+    }
+
+    public void setEventLose(String eventLose) {
+        this.eventLose = eventLose;
+    }
+
+
+    public String getEventArea() {
+        return eventArea;
+    }
+
+    public void setEventArea(String eventArea) {
+        this.eventArea = eventArea;
+    }
+
+
+    public String getEventMethod() {
+        return eventMethod;
+    }
+
+    public void setEventMethod(String eventMethod) {
+        this.eventMethod = eventMethod;
+    }
 
 }
