@@ -53,9 +53,9 @@ public class DoctorServiceImpl implements IDoctorService {
     }
 
     @Override
-    public int deletDoctorByid(int doctorId) {
+    public int deleteDoctorById(int doctorId) {
         before();
-        int n = doctorDao.deletDoctorByid(doctorId);
+        int n = doctorDao.deleteDoctorById(doctorId);
         after();
         return n;
     }
@@ -63,7 +63,7 @@ public class DoctorServiceImpl implements IDoctorService {
     @Override
     public SysDoctor findDoctorById(int doctorId) {
         before();
-        SysDoctor doctor = doctorDao.findProessorById(doctorId);
+        SysDoctor doctor = doctorDao.findDoctorById(doctorId);
         after();
         return doctor;
     }
