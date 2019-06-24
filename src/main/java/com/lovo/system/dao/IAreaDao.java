@@ -1,7 +1,5 @@
 package com.lovo.system.dao;
 
-import com.lovo.system.bean.SysArea;
-
 import java.util.List;
 import java.util.Map;
 

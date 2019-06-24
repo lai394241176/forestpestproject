@@ -1,13 +1,6 @@
 package com.lovo.system.bean;
 
 
-/**
- * @author che
- * @title: SysPest 虫害类
- * @projectName forestpestproject
- * @description: 虫害实体类
- * @date 2019/6/21 15:56
- */
 public class SysPest {
 
   private long pestId;
