@@ -36,4 +36,8 @@
         </where>
     </select>
 
+    <select id="findAreaByAreaId" parameterType="int" resultMap="areaMap">
+        select * from sys_area where area_id =#{0}
+    </select>
+
 </mapper>
