@@ -1,5 +1,7 @@
 package com.lovo.system.dao;
 
+import com.lovo.system.bean.SysEvent;
+
 import java.util.List;
 import java.util.Map;
 
