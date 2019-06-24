@@ -153,4 +153,20 @@ public class SysDoctor {
         this.doctorEmail = doctorEmail;
     }
 
+    @Override
+    public String toString() {
+        return "SysDoctor{" +
+                "doctorId=" + doctorId +
+                ", doctorName='" + doctorName + '\'' +
+                ", doctorSex='" + doctorSex + '\'' +
+                ", doctorBirthday='" + doctorBirthday + '\'' +
+                ", doctorImgPath='" + doctorImgPath + '\'' +
+                ", doctorSpeciality='" + doctorSpeciality + '\'' +
+                ", doctorPost='" + doctorPost + '\'' +
+                ", doctorTel='" + doctorTel + '\'' +
+                ", doctorCompany='" + doctorCompany + '\'' +
+                ", doctorHome='" + doctorHome + '\'' +
+                ", doctorEmail='" + doctorEmail + '\'' +
+                '}';
+    }
 }
