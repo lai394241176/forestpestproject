@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lovo.system.dao.IAreaDao">
+
+    <resultMap id="areaMap" type="sysArea">
+        <id column="area_adress_id" property="areaId"></id>
+        <result column="area_name" property="areaName"></result>
+        <result column="area_good_tree" property="areaGoodTree"></result>
+        <result column="area_tree_type" property="areaTreeType"></result>
+        <result column="area_adress_id" property="areaAdressId"></result>
+    </resultMap>
+
+    <insert id="insertArea" parameterType="sysArea">
+        insert into sys_area (area_name, area_tree_type, area_good_tree, area_adress_id) 
+        values (#{areaName},#{areaTreeType},#{areaGoodTree},#{areaAdressId})
+    </insert>
+
+    <select id="findAllArea" resultMap="areaMap">
+        select * from sys_area
+    </select>
+
+    <select id="findAreaByItems" resultMap="areaMap">
+        select * from sys_area left join sys_class sc on sys_area.area_id = sc.area_id
+
+        <where>
+            <if test="findByAreaName != null and findByAreaName != ''">
+                and area_name like '%${findByAreaName}%'
+            </if>
+            <if test="findByAreaTreeType != null and findByAreaTreeType != ''">
+                and area_tree_type like '%${areaTreeType}%'
+            </if>
+            <if test="findByClassName != null and findByClassName != ''">
+                and sc.sclass_name like '%${sClassName}%'
+            </if>
+        </where>
+    </select>
+
+
+</mapper>
