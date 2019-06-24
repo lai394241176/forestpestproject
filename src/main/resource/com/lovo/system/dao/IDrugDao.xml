@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lovo.system.dao.IDrugDao">
+
+    <!--添加药品器械-->
+    <insert id="addSysDrug" parameterType="SysDrug">
+        insert into sys_drug (
+        drug_name,
+        drug_cure_type,
+        drug_type,
+        drug_use_way,
+        drug_num,
+
+        values (
+        #{drugName},
+        #{drug.getDrugCureType().getTypeKey()},
+        #{drug.getDrugType().getTypeKey()},
+        #{drugUseWay},
+        #{drugNum},
+        );
+    </insert>
+
+    <!--动态查询药品器械-->
+    <select id="queDrug" parameterType="Map" resultMap="drugMap">
+        select * from sys_drug
+        <where>
+            <if test="drugName != null and drugName!=''">
+                and doctor_name like '%${drugName}%'
+            </if>
+            <if test="drugCureType != null and drugCureType != ''">
+                and doctor_speciality = #{drugCureType}
+            </if>
+            <if test="drugType != null and drugType != ''">
+                and doctor_company = #{drugType}
+            </if>
+        </where>
+    </select>
+
+
+</mapper>

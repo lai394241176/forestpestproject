@@ -1,5 +1,6 @@
 package com.lovo.system.service.impl;
 
+import com.lovo.system.bean.SysDoctor;
 import com.lovo.system.service.IDoctorService;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ import java.util.Map;
  * @author che
  * @title: DoctorServiceImplTest
  * @projectName forestpestproject
- * @description: 用户持久接口测试类
+ * @description: 专家持久接口测试类
  * @date 2019/6/21 16:50
  */
 public class DoctorServiceImplTest {

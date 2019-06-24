@@ -23,6 +23,17 @@
     </environments>
 
     <mappers>
+        <
+        <
+        <
+        <
+        <
+        <
+        < HEAD
         <!--<package name="com/che/mybaits/dao"></package>-->
+        =======
+        <!--<mapper resource="com/lovo/system/dao/IDoctorDao.xml"></mapper>-->
+        <package name="com.lovo.system.dao"></package>
+        >>>>>>> origin/master
     </mappers>
 </configuration>
