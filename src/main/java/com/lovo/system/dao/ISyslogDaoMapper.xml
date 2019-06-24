@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lovo.myservlet.dao.IPageDao">
+
+   <select id="getListStudent" parameterType="map" resultType="sysStudent">
+      select student_id as studentId, student_name as studentName, login_name as loginName, login_password as loginPassword from sys_student
+      where 1=1
+      <if test="studentId!='' and studentId!=null">
+       and   student_id &gt; #{studentId}
+      </if>
+      limit #{startPage},#{countPage}
+   </select>
+
+    <select id="getCountListStudent" parameterType="map" resultType="int" >
+        select count(student_id) from sys_student
+        where 1=1
+        <if test="studentId!='' and studentId!=null">
+            and   student_id &gt; #{studentId}
+        </if>
+    </select>
+</mapper>
