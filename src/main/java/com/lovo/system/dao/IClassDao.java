@@ -39,7 +39,7 @@ public interface IClassDao {
      * @param classId 小班id
      * @return 小班对象
      */
-    SysClass fingClassById(int classId);
+    SysClass findClassById(int classId);
 
     /**
      * 条件查询小班
