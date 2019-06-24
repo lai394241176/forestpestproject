@@ -28,13 +28,12 @@
                 and area_name like '%${findByAreaName}%'
             </if>
             <if test="findByAreaTreeType != null and findByAreaTreeType != ''">
-                and area_tree_type like '%${areaTreeType}%'
+                and area_tree_type like '%${findByAreaTreeType}%'
             </if>
             <if test="findByClassName != null and findByClassName != ''">
                 and sc.sclass_name like '%${sClassName}%'
             </if>
         </where>
     </select>
-
 
 </mapper>
