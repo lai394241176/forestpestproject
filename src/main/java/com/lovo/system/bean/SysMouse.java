@@ -1,16 +1,10 @@
 package com.lovo.system.bean;
 
 
-/**
- * @author che
- * @title: SysMouse 鼠害类
- * @projectName forestpestproject
- * @description: 鼠害实体类
- * @date 2019/6/21 15:56
- */
 public class SysMouse {
 
   private long mouseId;
+
   private String mouseName;
   private String mouseFood;
   private String mouseBreed;

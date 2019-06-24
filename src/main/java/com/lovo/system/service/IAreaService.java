@@ -1,4 +1,4 @@
-package com.lovo.system.dao;
+package com.lovo.system.service;
 
 import com.lovo.system.bean.SysArea;
 
@@ -7,12 +7,12 @@ import java.util.Map;
 
 /**
  * @author che
- * @title: IAreaDao 地区持久接口
+ * @title: IAreaService 地区业务接口
  * @projectName forestpestproject
- * @description: 地区持久接口
- * @date 2019/6/24 9:25
+ * @description: 地区的添加、查询
+ * @date 2019/6/24 13:14
  */
-public interface IAreaDao {
+public interface IAreaService {
 
     //===================添加======================
 
@@ -41,14 +41,4 @@ public interface IAreaDao {
      * @return 查询结果地区集合
      */
     List<SysArea> findAreaByItems(Map findItems);
-
-    /**
-     * 按照地区id查找地区
-     *
-     * @param areaId 地区Id
-     * @return 地区对象
-     */
-    SysArea findAreaByAreaId(int areaId);
-
-
 }

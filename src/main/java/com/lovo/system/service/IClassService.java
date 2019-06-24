@@ -1,4 +1,4 @@
-package com.lovo.system.dao;
+package com.lovo.system.service;
 
 import com.lovo.system.bean.SysClass;
 
@@ -7,12 +7,13 @@ import java.util.Map;
 
 /**
  * @author che
- * @title: IClassDao 小班持久接口
+ * @title: IClassService 小班业务接口
  * @projectName forestpestproject
- * @description: 小班持久接口
- * @date 2019/6/24 9:36
+ * @description: 小班的增加、修改、查询
+ * @date 2019/6/24 14:05
  */
-public interface IClassDao {
+public interface IClassService {
+
 
     //================添加=====================
 
@@ -58,6 +59,4 @@ public interface IClassDao {
      * @return 受影响的行数
      */
     int updateClass(Map classUpdateMap);
-
-
 }

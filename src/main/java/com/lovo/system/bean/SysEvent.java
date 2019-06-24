@@ -1,12 +1,11 @@
 package com.lovo.system.bean;
 
-
 /**
- * @author che
- * @title: SysEvent 事件类
- * @projectName forestpestproject
- * @description: 事件实体类
- * @date 2019/6/21 15:56
+ * @Description: 事件实体类
+ * @Author: che
+ * @CreateDate: 2019/6/24  13:05
+ * @UpdateRemark: 修改内容
+ * @Version: 1.0
  */
 public class SysEvent {
 
@@ -27,12 +26,11 @@ public class SysEvent {
      */
     private String eventImgPath;
     /**
-     * 事件发生时间
+     * 事件发生日期
      */
     private String eventDate;
-
     /**
-     * 时间灾情阶段
+     * 事件灾情阶段
      */
     private long eventStage;
     /**
@@ -40,7 +38,7 @@ public class SysEvent {
      */
     private long eventType;
     /**
-     * 事件描述
+     * 事件灾害描述
      */
     private String eventInfo;
     /**
@@ -52,13 +50,18 @@ public class SysEvent {
      */
     private String eventLose;
     /**
-     * 事件影响面积
+     * 事件防治面积
      */
     private String eventArea;
     /**
      * 事件防治方案
      */
     private String eventMethod;
+
+    /**
+     * 事件发生地区对象
+     */
+    private SysArea area;
 
 
     public long getEventId() {
@@ -168,4 +171,11 @@ public class SysEvent {
         this.eventMethod = eventMethod;
     }
 
+    public SysArea getArea() {
+        return area;
+    }
+
+    public void setArea(SysArea area) {
+        this.area = area;
+    }
 }

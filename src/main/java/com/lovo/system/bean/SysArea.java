@@ -1,12 +1,11 @@
 package com.lovo.system.bean;
 
-
 /**
- * @author che
- * @title: SysArea 地区类
- * @projectName forestpestproject
- * @description: 地区实体类
- * @date 2019/6/21 15:56
+ * @Description: 地区实体类
+ * @Author: che
+ * @CreateDate: 2019/6/24  12:58
+ * @UpdateRemark: 修改内容
+ * @Version: 1.0
  */
 public class SysArea {
 
@@ -30,8 +29,6 @@ public class SysArea {
      * 区域地类
      */
     private long areaAdressId;
-
-
 
     public long getAreaId() {
         return areaId;
@@ -77,4 +74,14 @@ public class SysArea {
         this.areaAdressId = areaAdressId;
     }
 
+    @Override
+    public String toString() {
+        return "SysArea{" +
+                "areaId=" + areaId +
+                ", areaName='" + areaName + '\'' +
+                ", areaTreeType='" + areaTreeType + '\'' +
+                ", areaGoodTree='" + areaGoodTree + '\'' +
+                ", areaAdressId=" + areaAdressId +
+                '}';
+    }
 }

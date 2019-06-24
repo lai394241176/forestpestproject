@@ -1,12 +1,11 @@
 package com.lovo.system.bean;
 
-
 /**
- * @author che
- * @title: SysSick 专家实体类
- * @projectName forestpestproject
- * @description: 专家实体类
- * @date 2019/6/21 15:56
+ * @Description: 专家实体类
+ * @Author: che
+ * @CreateDate: 2019/6/24  12:52
+ * @UpdateRemark: 修改内容
+ * @Version: 1.0
  */
 public class SysDoctor {
 
@@ -27,7 +26,7 @@ public class SysDoctor {
      */
     private String doctorBirthday;
     /**
-     * 专家照片路径
+     * 专家头像路径
      */
     private String doctorImgPath;
     /**

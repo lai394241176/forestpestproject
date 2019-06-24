@@ -1,12 +1,11 @@
 package com.lovo.system.bean;
 
-
 /**
- * @author che
- * @title: SysClass 小班类
- * @projectName forestpestproject
- * @description: 小班实体类
- * @date 2019/6/21 15:56
+ * @Description: 小班实体类
+ * @Author: che
+ * @CreateDate: 2019/6/24  12:54
+ * @UpdateRemark: 修改内容
+ * @Version: 1.0
  */
 public class SysClass {
 
@@ -15,7 +14,7 @@ public class SysClass {
      */
     private long sClassId;
     /**
-     * 负责地区id
+     * 地区id
      */
     private long areaId;
     /**
@@ -23,11 +22,11 @@ public class SysClass {
      */
     private String sClassName;
     /**
-     * 小班领导
+     * 小班领导人
      */
     private String sClassLeader;
     /**
-     * 小班领导电话
+     * 小班领导人电话
      */
     private String sClassLeaderTel;
     /**
@@ -38,6 +37,11 @@ public class SysClass {
      * 小班创建日期
      */
     private String sClassStartDate;
+
+    /**
+     * 小班管理的地区对象
+     */
+    private SysArea area;
 
 
     public long getsClassId() {
@@ -58,12 +62,12 @@ public class SysClass {
     }
 
 
-    public String getsClassName() {
+    public String getSclassName() {
         return sClassName;
     }
 
-    public void setsClassName(String sClassName) {
-        this.sClassName = sClassName;
+    public void setSclassName(String sclassName) {
+        this.sClassName = sclassName;
     }
 
 
@@ -102,4 +106,17 @@ public class SysClass {
         this.sClassStartDate = sClassStartDate;
     }
 
+    @Override
+    public String toString() {
+        return "SysClass{" +
+                "sClassId=" + sClassId +
+                ", areaId=" + areaId +
+                ", sClassName='" + sClassName + '\'' +
+                ", sClassLeader='" + sClassLeader + '\'' +
+                ", sClassLeaderTel='" + sClassLeaderTel + '\'' +
+                ", sClassNum=" + sClassNum +
+                ", sClassStartDate='" + sClassStartDate + '\'' +
+                ", area=" + area +
+                '}';
+    }
 }

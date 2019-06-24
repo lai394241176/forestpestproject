@@ -23,6 +23,7 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/lovo/system/dao/IDoctorDao.xml"></mapper>
+        <!--<mapper resource="com/lovo/system/dao/IDoctorDao.xml"></mapper>-->
+        <package name="com.lovo.system.dao"></package>
     </mappers>
 </configuration>
