@@ -50,10 +50,18 @@ public class SysEvent {
      */
     private String eventLose;
     /**
-     * 事件防治方案
+     * 事件防治面积
      */
     private String eventArea;
+    /**
+     * 事件防治方案
+     */
     private String eventMethod;
+
+    /**
+     * 事件发生地区对象
+     */
+    private SysArea area;
 
 
     public long getEventId() {
@@ -163,4 +171,11 @@ public class SysEvent {
         this.eventMethod = eventMethod;
     }
 
+    public SysArea getArea() {
+        return area;
+    }
+
+    public void setArea(SysArea area) {
+        this.area = area;
+    }
 }
