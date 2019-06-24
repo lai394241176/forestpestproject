@@ -38,6 +38,11 @@ public class SysClass {
      */
     private String sClassStartDate;
 
+    /**
+     * 小班管理的地区对象
+     */
+    private SysArea area;
+
 
     public long getsClassId() {
         return sClassId;
@@ -101,4 +106,17 @@ public class SysClass {
         this.sClassStartDate = sClassStartDate;
     }
 
+    @Override
+    public String toString() {
+        return "SysClass{" +
+                "sClassId=" + sClassId +
+                ", areaId=" + areaId +
+                ", sClassName='" + sClassName + '\'' +
+                ", sClassLeader='" + sClassLeader + '\'' +
+                ", sClassLeaderTel='" + sClassLeaderTel + '\'' +
+                ", sClassNum=" + sClassNum +
+                ", sClassStartDate='" + sClassStartDate + '\'' +
+                ", area=" + area +
+                '}';
+    }
 }

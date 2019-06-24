@@ -30,7 +30,6 @@ public class SysArea {
      */
     private long areaAdressId;
 
-
     public long getAreaId() {
         return areaId;
     }
