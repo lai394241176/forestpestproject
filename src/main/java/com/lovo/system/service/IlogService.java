@@ -1,11 +1,12 @@
-package com.lovo.system.dao;
+package com.lovo.system.service;
+
 
 import com.lovo.system.bean.SysLog;
 
 import java.util.List;
 import java.util.Map;
 
-public interface ISyslogDao {
+public interface IlogService {
     /**
      * 根据日期查询日志记录
      *

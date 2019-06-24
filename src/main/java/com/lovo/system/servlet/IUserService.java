@@ -1,4 +1,4 @@
 package com.lovo.system.servlet;
 
-public class T {
+public interface IUserService {
 }

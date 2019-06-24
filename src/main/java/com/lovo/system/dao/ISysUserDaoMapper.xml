@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lovo.myservlet.dao.IPageDao">
+<mapper namespace="com.lovo.system.dao.ISysUserDao">
 
+
+    <resultMap id="UserMap" type="SysUser">
+        <id column="user_id" property="userId"></id>
+        <id column="user_name" property="userName"></id>
+        <id column="user_pwd" property="userPwd"></id>
+        <id column="userTrueName" property="userTrueName"></id>
+    </resultMap>
+
+    <!--用户登陆-->
+    <select id="getUserByNameAndPass" resultType="SysUser">
+select user_id as userId,user_name as userName,user_pwd as userPwd,userTrueName as userTrueName from sys_user
+where userName=#{0} and userPwd=#{1};
+
+    </select>
+
+    <!--添加-->
+    <insert id="addUserName" parameterType="SysUser">
+insert into sys_user(
+user_id,
+user_name,
+user_pwd,
+userTrueName)
+ values(#{userName},
+ #{userPwd},
+ #{userTrueName});
+</insert>
+
+    <!--删除用户-->
+    <delete id="deleteUserName" parameterType="int">
+      delete from sys_user where user_id=#{0}
+    </delete>
+
+    <!--根据id查询用户信息-->
+    <select id="findUser" parameterType="int">
+select * from sys_user where user_id=#{0}
+    </select>
+    <!--根据权限模糊查询用户集合-->
+
+    <!--根据用户ID查询用户对应权限-->
+
+    <!--修改用户等级-->
+    <update id="updateSysUser" parameterType="powerName">
+        update sys_user
+        <set>
+            <if test="updatePowerName != null and updatePowerName!=''">
+                Power_name=#{powerName}
+            </if>
+        </set>
+        where user_id=#{userId}
+
+    </update>
+    <!--查询总行数-->
+    <select id="getintrowcount" resultType="int" parameterType="map">
+      select count(user_id)from
+    </select>
 </mapper>
