@@ -1,7 +1,6 @@
 package com.lovo.system.service.impl;
 
 import com.lovo.system.bean.SysClass;
-import com.lovo.system.dao.IAreaDao;
 import com.lovo.system.dao.IClassDao;
 import com.lovo.system.db.GetSession;
 import com.lovo.system.service.IClassService;

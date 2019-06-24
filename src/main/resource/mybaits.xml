@@ -6,7 +6,7 @@
     <properties resource="jdbc.properties"></properties>
     <!-- 别名-->
     <typeAliases>
-        <package name="com.lovo.system.bean"></package>
+        <!--<package name="com.che.mybatis.entity"></package>-->
     </typeAliases>
 
     <environments default="development">
@@ -23,7 +23,17 @@
     </environments>
 
     <mappers>
+        <
+        <
+        <
+        <
+        <
+        <
+        < HEAD
+        <!--<package name="com/che/mybaits/dao"></package>-->
+        =======
         <!--<mapper resource="com/lovo/system/dao/IDoctorDao.xml"></mapper>-->
         <package name="com.lovo.system.dao"></package>
+        >>>>>>> origin/master
     </mappers>
 </configuration>
