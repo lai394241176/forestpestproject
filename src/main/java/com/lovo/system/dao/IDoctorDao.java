@@ -1,9 +1,8 @@
 package com.lovo.system.dao;
 
-import com.lovo.system.bean.SysDoctor;
-
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * @author che

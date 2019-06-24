@@ -1,7 +1,5 @@
 package com.lovo.system.service;
 
-import com.lovo.system.bean.SysDoctor;
-
 import java.util.List;
 import java.util.Map;
 
