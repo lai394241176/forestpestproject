@@ -1,5 +1,6 @@
 package com.lovo.system.service.impl;
 
+import com.lovo.system.bean.SysDoctor;
 import com.lovo.system.dao.IDoctorDao;
 import com.lovo.system.db.GetSession;
 import com.lovo.system.service.IDoctorService;
