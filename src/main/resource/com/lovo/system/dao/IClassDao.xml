@@ -11,7 +11,7 @@
         <result column="sclass_leader_tel" property="sClassLeaderTel"></result>
         <result column="sclass_num" property="sClassNum"></result>
         <result column="sclass_start_date" property="sClassStartDate"></result>
-        <association property="areaId" column="area_id" javaType="sysArea">
+        <association column="area_id" property="area" javaType="sysArea">
             <id column="area_adress_id" property="areaId"></id>
             <result column="area_name" property="areaName"></result>
             <result column="area_good_tree" property="areaGoodTree"></result>
@@ -41,7 +41,7 @@
         select * from sys_class left join sys_area sa on sys_class.area_id = sa.area_id
     </select>
 
-    <select id="fingClassById" resultMap="classMap">
+    <select id="findClassById" resultMap="classMap">
         select * from sys_class left join sys_area sa on sys_class.area_id = sa.area_id
         where sclass_id = #{0}
     </select>
