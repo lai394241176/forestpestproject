@@ -78,7 +78,9 @@
     </select>
 
     <update id="sendEventToDoctor">
+        update sys_event
 
+        where sys_event.event_id =#{eventId}
     </update>
 
     <update id="updateEvent">
