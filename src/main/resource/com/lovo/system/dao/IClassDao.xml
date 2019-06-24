@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lovo.system.dao.IClassDao">
+
+    <resultMap id="classMap" type="sysClass">
+        <id column="sclass_id" property="sClassId"></id>
+        <result column="area_id" property="areaId"></result>
+        <result column="sclass_name" property="sClassName"></result>
+        <result column="sclass_leader" property="sClassLeader"></result>
+        <result column="sclass_leader_tel" property="sClassLeaderTel"></result>
+        <result column="sclass_num" property="sClassNum"></result>
+        <result column="sclass_start_date" property="sClassStartDate"></result>
+        <association property="areaId" column="area_id" javaType="sysArea">
+            <id column="area_adress_id" property="areaId"></id>
+            <result column="area_name" property="areaName"></result>
+            <result column="area_good_tree" property="areaGoodTree"></result>
+            <result column="area_tree_type" property="areaTreeType"></result>
+            <result column="area_adress_id" property="areaAdressId"></result>
+        </association>
+    </resultMap>
+
+    <insert id="insertClass" parameterType="sysClass">
+        insert into sys_class (
+        area_id,
+        sclass_name,
+        sclass_leader,
+        sclass_leader_tel,
+        sclass_num,
+        sclass_start_date)
+        values (
+        #{areaId},
+        #{sClassName},
+        #{sClassLeader},
+        #{sClassLeaderTel},
+        #{sClassNum},
+        #{sClassStartDate})
+    </insert>
+
+    <select id="findAllClass" resultMap="classMap">
+        select * from sys_class left join sys_area sa on sys_class.area_id = sa.area_id
+    </select>
+
+    <select id="fingClassById" resultMap="classMap">
+        select * from sys_class left join sys_area sa on sys_class.area_id = sa.area_id
+        where sclass_id = #{0}
+    </select>
+
+    <select id="findClassByItems" resultMap="classMap">
+        select * from sys_class left join sys_area sa on sys_class.area_id = sa.area_id
+        <where>
+            <if test="findByClassName != null and findByClassName != '' ">
+                and sclass_name like '%${findByClassName}%'
+            </if>
+            <if test="findByArea != null and findByArea != '' ">
+                and sa.area_name like '%${findByArea}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="updateClass" parameterType="map">
+        update sys_class
+        <set>
+            <if test="updateLeader != null and updateLeader != ''">
+                sclass_leader = #{updateLeader},
+            </if>
+            <if test="updateLeaderTel != null and updateLeaderTel != ''">
+                sclass_leader_tel = #{updateLeaderTel},
+            </if>
+        </set>
+        where sclass_id = #{classId}
+    </update>
+</mapper>
