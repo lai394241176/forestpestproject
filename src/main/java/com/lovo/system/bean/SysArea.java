@@ -75,4 +75,14 @@ public class SysArea {
         this.areaAdressId = areaAdressId;
     }
 
+    @Override
+    public String toString() {
+        return "SysArea{" +
+                "areaId=" + areaId +
+                ", areaName='" + areaName + '\'' +
+                ", areaTreeType='" + areaTreeType + '\'' +
+                ", areaGoodTree='" + areaGoodTree + '\'' +
+                ", areaAdressId=" + areaAdressId +
+                '}';
+    }
 }
